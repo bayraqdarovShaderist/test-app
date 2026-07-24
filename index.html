@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>My Test App</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #6b73ff, #000dff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    text-align: center;
+    color: white;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  #count {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  button {
+    font-size: 1.1rem;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #000dff;
+    font-weight: bold;
+  }
+  .reset {
+    display: block;
+    margin: 20px auto 0;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>It works!</h1>
+    <div id="count">0</div>
+    <button onclick="increment()">Tap me</button>
+    <button class="reset" onclick="reset()">Reset</button>
+  </div>
+
+<script>
+  let count = 0;
+
+  function increment() {
+    count = count + 1;
+    document.getElementById("count").textContent = count;
+  }
+
+  function reset() {
+    count = 0;
+    document.getElementById("count").textContent = count;
+  }
+</script>
+</body>
+</html>
